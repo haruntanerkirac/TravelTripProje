@@ -1,0 +1,20 @@
+﻿@model TravelTripProje.Models.Sınıflar.Hakkimizda
+
+@{
+    ViewBag.Title = "HakkimizdaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>HAKKIMIZDA GÜNCELLE</h2>
+<br />
+@using (Html.BeginForm("HakkimizdaGuncelle", "Admin", FormMethod.Post))
+{
+<form class="form-group">
+    @Html.Label("FOTOĞRAF")
+    @Html.TextBoxFor(x => x.FotoUrl, new { @class = "form-control" })
+    <br />
+    @Html.Label("AÇIKLAMA")
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">GÜNCELLE</button>
+</form>
+}
