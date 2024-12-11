@@ -1,0 +1,110 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+            .contact-header h1 {
+                margin: 0;
+                color: #007bff;
+            }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .contact-form button {
+            display: block;
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            .contact-form button:hover {
+                background-color: #0056b3;
+            }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+            .contact-info a {
+                color: #007bff;
+                text-decoration: none;
+            }
+
+                .contact-info a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1>Bizimle İletişime Geçin.</h1>
+        </div>
+        <form class="contact-form" method="post" action="/Iletisim/MesajGonder">
+            <input type="text" placeholder="Ad Soyad" name="AdSoyad" required />
+            <input type="text" placeholder="E-mail Adresi" name="Mail" required />
+            <input type="text" placeholder="Konu" name="Konu" required />
+            <textarea placeholder="Mesaj" name="Mesaj" required></textarea>
+            <input type="submit" value="Gönder" />
+        </form>
+    </div>
+</body>
+</html>
+
+
